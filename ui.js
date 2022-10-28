@@ -18,7 +18,10 @@ class UI {
     const windF = weather.currentConditions.windchill;
 
     const toC = (x) => {
-      return ((5 / 9) * (x - 32)).toFixed(1);
+      if (x !== null) {
+        return ((5 / 9) * (x - 32)).toFixed(1);
+      }
+      return;
     };
     this.location.textContent = weather.address;
     this.desc.textContent = weather.currentConditions.icon;
