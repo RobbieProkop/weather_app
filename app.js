@@ -20,9 +20,7 @@ document.getElementById("w-change-btn").addEventListener("click", (e) => {
     const modal = document.getElementById("locModal");
     const backdrop = document.getElementsByClassName("modal-backdrop");
     modal.classList.remove("show");
-    console.log("backdrop :>> ", backdrop);
     for (const el in backdrop) {
-      console.log("el", backdrop[el]);
       if (backdrop[el].classList) {
         backdrop[el].classList.remove("show");
       }
