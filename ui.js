@@ -32,7 +32,12 @@ class UI {
     this.dew.textContent = `Dew Point: ${
       weather.currentConditions.dew
     } F (${toC(weather.currentConditions.dew)} C)`;
-    this.windchill.textContent = `Windchill: ${windF} F (${toC(windF)} C)`;
+    this.windchill.textContent = weather.currentConditions.windchill
+      ? `Windchill: 
+        
+      ${windF} F (${toC(windF)} C)`
+      : "Windchill: not available";
+
     this.sunUp.textContent = `Sunrise: ${
       weather.currentConditions.sunrise.split("T")[1].split("-")[0]
     }`;
