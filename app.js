@@ -1,7 +1,7 @@
-const ui = new UI();
 //initialize weather class
 const weather = new Weather("Boston", "MA");
-
+//init ui
+const ui = new UI();
 // get weather on DOM load
 document.addEventListener("DOMContentLoaded", getWeather);
 
