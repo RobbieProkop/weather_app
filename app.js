@@ -1,7 +1,14 @@
+//init storage
+const storage = new Storage();
+
+//get store location data
+const weatherLocation = storage.getLocationData();
 //initialize weather class
-const weather = new Weather("Boston", "MA");
+const weather = new Weather(weatherLocation.city, weatherLocation.state);
+
 //init ui
 const ui = new UI();
+
 // get weather on DOM load
 document.addEventListener("DOMContentLoaded", getWeather);
 
