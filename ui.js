@@ -30,6 +30,11 @@ class UI {
       weather.currentConditions.dew
     } F (${toC(weather.currentConditions.dew)} C)`;
     this.windchill.textContent = `Windchill: ${windF} F (${toC(windF)} C)`;
-    this.sunUp.textContent = new Date();
+    this.sunUp.textContent = `Sunrise: ${
+      weather.currentConditions.sunrise.split("T")[1].split("-")[0]
+    }`;
+    this.sunDown.textContent = `Sunset: ${
+      weather.currentConditions.sunset.split("T")[1].split("-")[0]
+    }`;
   }
 }
