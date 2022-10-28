@@ -1,3 +1,4 @@
+const ui = new UI();
 //initialize weather class
 const weather = new Weather("Boston", "MA");
 
@@ -9,6 +10,7 @@ function getWeather() {
     .getWeather()
     .then((results) => {
       console.log("results :>> ", results);
+      ui.paint(results);
     })
     .catch((err) => console.log("err :>> ", err));
 }
